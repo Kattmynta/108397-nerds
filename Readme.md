@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Anna Kuleshova](https://up.htmlacademy.ru/htmlcss/15/user/108397).
-* Наставник: `Неизвестно`.
+* Наставник: [Игорь Плиев](https://htmlacademy.ru/profile/id233017).
 
 ---
 
