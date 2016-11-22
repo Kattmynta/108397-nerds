@@ -39,15 +39,18 @@
               <h2>Стоимость:</h2>
               <div class="price-slider">
                 <div class="scale">
-                  <div class="scale-between"></div>
+                  <div class="selected-range">
+                    <div class="runner runner-min"></div>
+                    <div class="runner runner-max"></div>
+                  </div>
                 </div>
               </div>
-              <div class="price-text-left">
-                От <span>0</span>
-              </div>
-              <div class="price-text-right">
-                до <span>15 000</span>
-              </div>
+              <label class="min-price">
+                От <input type="text" name="min-price" value="0">
+              </label>
+              <label class="max-price">
+                до <input type="text" name="max-price" value="15 000">
+              </label>
             </div>
             <div class="catalog-filter-grid">
               <h2>Сетка:</h2>

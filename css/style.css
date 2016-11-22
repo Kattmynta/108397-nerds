@@ -48,25 +48,13 @@ html {
 }
 
 body {
-  width: 1440px;
+  min-width: 1440px;
   margin: 0;
 
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: black;
-}
-
-header {
-
-}
-
-main {
-
-}
-
-footer {
-
 }
 
 h1 {
@@ -97,6 +85,16 @@ a {
   color: #ffffff;
   background-color: #fb565a;
   border-radius: 3px;
+}
+
+.btn:hover {
+  background-color: #e74246;
+}
+
+.btn:active {
+    background-color: #d7373b;
+    color: rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 3px rgba(193, 49, 53, 1);
 }
 
 .clearfix:after {
@@ -141,21 +139,17 @@ header  a {
   float: left;
   min-width: 440px;
   margin: 0;
-  margin-left: 201px;
+  margin-left: 200px;
   padding: 0;
   padding-top: 29px;
   list-style: none;
   font-size: 0;
 }
 
-.main-navigation-ul  > li{
+.main-navigation-ul  > li {
   display: inline-block;
   margin-right: 48px;
   font-size: 16px;
-}
-
-.main-navigation-ul  > li:first-child {
-  margin-right: 47px;
 }
 
 .main-navigation-ul  > li:last-child {
@@ -188,31 +182,37 @@ header  a {
 
 .slider-controls {
   position: absolute;
-  bottom: 95px;
+  z-index: 100;
+  bottom: 101px;
   left: 50%;
   width: 200px;
-  height: 20px;
+  height: 8px;
   margin-left: -100px;
   text-align: center;
-  z-index: 100;
 }
 
 .slider-controls label {
   display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin: 0 7px;
-  background: white;
-  border: 5px solid white;
+  width: 4px;
+  height: 4px;
+  margin-right: 23px;
   vertical-align: top;
+  border: 2px solid white;
+  box-shadow: 0 0 0 5px white;
   border-radius: 50%;
+  background: white;
   cursor: pointer;
 }
+
+.slider-controls label:last-child {
+  margin-right: 0;
+}
+
 
 #btn-1:checked ~ .slider-controls label[for="btn-1"],
 #btn-2:checked ~ .slider-controls label[for="btn-2"],
 #btn-3:checked ~ .slider-controls label[for="btn-3"] {
-  background: #c1c1c1;
+  border: 2px solid #bfbfbf;
 }
 
 .slide {
@@ -234,7 +234,7 @@ header  a {
   padding-bottom: 10px;
   font-size: 55px;
   line-height: 55px;
-  font-weight: bold; /*medium!*/
+  font-weight: 500;
   color: black;
 }
 
@@ -255,7 +255,7 @@ header  a {
 .slide:nth-child(2) {
   background-image: url('../img/bg-slider-2.jpg');
   background-repeat: no-repeat;
-  background-position: 100% 0;/* 10px; */
+  background-position: 100% 0;
 }
 
 .slide:nth-child(3) {
@@ -336,19 +336,49 @@ header  a {
   text-align: center;
 }
 
-.service:nth-child(1) .btn {
+.btn-red {
   color: #ffffff;
   background-color: #fb565a;
 }
 
-.service:nth-child(2) .btn {
+.btn-red:hover {
+  background-color: #e74246;
+}
+
+.btn-red:active {
+  background-color: #b63538;
+  color:#e1787a;
+  box-shadow: 0 2px 0 0 #9b2d30 inset;
+}
+
+.btn-green {
   color: #ffffff;
   background-color: #00ca74;
 }
 
-.service:nth-child(3) .btn {
+.btn-green:hover {
+  background-color: #01a25e;
+}
+
+.btn-green:active {
+  background-color: #009053;
+  color:#64c090;
+  box-shadow: 0 2px 0 0 #007b47 inset;
+}
+
+.btn-yellow {
   color: #ffffff;
   background-color: #efc84a;
+}
+
+.btn-yellow:hover {
+  background-color: #eab534;
+}
+
+.btn-yellow:active {
+  background-color: #e5a722;
+  color:#ecc277;
+  box-shadow: 0 2px 0 0 #ce961f inset;
 }
 
 .studio {
@@ -367,10 +397,15 @@ header  a {
 
 .studio-left-b {
   margin: 34px 0;
-  font-size: 45px;
+  /*font-size: 45px;
   font-weight: bold;
   line-height: 1;
-  /*letter-spacing:*/
+  letter-spacing:*/
+
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
 }
 
 .studio-left-ul-title {
@@ -431,6 +466,10 @@ header  a {
   line-height: 1;
 }
 
+.percent {
+  font-size: 32px;
+}
+
 .studio-right .numbers-item-text {
   font-size: 16px;
   line-height: 18px;
@@ -458,6 +497,15 @@ header  a {
   display: block;
   vertical-align: bottom;
   margin: 0 auto;
+  opacity: 0.2;
+}
+
+.partners-item .logo:hover img {
+  opacity: 1;
+}
+
+.partners-item .logo:active img {
+  opacity: 0.1;
 }
 
 .partners-item:after {
@@ -549,15 +597,17 @@ header  a {
   margin-bottom: 48px;
 }
 
-.catalog-filter-price span {
+.catalog-filter-price input {
   display: inline-block;
   width: 80px;
   margin-left: 7px;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   text-align: center;
+  font-size: 16px;
   background-color: #eeeeee;
-  border-radius: 3px;  
+  border: none;
+  border-radius: 3px;
 }
 
 .price-slider {
@@ -570,8 +620,7 @@ header  a {
 }
 
 .scale {
-  position: absolute;
-  z-index: 0;
+  position: relative;
   top: 39px;
   left: 18px;
   width: 222px;
@@ -579,50 +628,50 @@ header  a {
   background-color: #d7dcde;
 }
 
-.scale:before {
-  content: '';
-  position: absolute;
-  display: block;
-  z-index: 2;
-  top: -9px;
-  left: 0;
-  width: 4px;
-  height: 4px;
-  background-color: #ababab; 
-  border: 8px solid white;
-  border-radius: 50%;
+.selected-range {
+  position: relative;
+  width: 73%;
+  height: 2px;
+  background-color: #00ca74;
 }
 
-.scale:after {
-  content: '';
-  position: absolute;
+.runner {
   display: block;
-  z-index: 2;
-  top: -9px;
-  left: 144px;
   width: 4px;
   height: 4px;
-  background-color: #ababab; 
+  background-color: #ababab;
   border: 8px solid white;
   border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
 }
 
-.scale-between {
+.runner:hover,
+.runner:hover {
+  cursor: pointer;
+}
+
+.runner-min {
   position: absolute;
   z-index: 1;
-  top: 0;
+  top: -9px;
   left: 0;
-  width: 144px;
-  height: 2px;
-  background-color: #00ca74;  
 }
 
-.price-text-left {
+.runner-max {
+  position: absolute;
+  z-index: 1;
+  top: -9px;
+  right: 0;
+}
+
+
+
+.min-price {
   float: left;
   text-transform: uppercase;
 }
-  
-.price-text-right {
+
+.max-price {
   float: right;
   text-transform: uppercase;
 }
@@ -641,16 +690,20 @@ header  a {
 }
 
 .catalog-filter-grid label:before {
-  content: '';
+  content: url(../img/radio-off.png);
   position: absolute;
   left: 1px;
   top: -2px;
   display: block;
-  width: 16px;
-  height: 16px;
-  background-color: white;
-  border: 4px solid #b8b8b8;
-  border-radius: 50%;
+  opacity: 0.4;
+}
+
+.catalog-filter-grid input:checked + label:before {
+  content: url(../img/radio-on.png);
+}
+
+.catalog-filter-grid label:hover:before {
+  opacity: 1;
 }
 
 .catalog-filter-features {
@@ -672,6 +725,15 @@ header  a {
   left: 1px;
   top: -2px;
   display: block;
+  opacity: 0.4;
+}
+
+.catalog-filter-features input:checked + label:before {
+  content: url(../img/checkbox-on.png);
+}
+
+.catalog-filter-features label:hover:before {
+  opacity: 1;
 }
 
 .filter-btn {
@@ -722,21 +784,20 @@ header  a {
 
 .catalog-products-item {
   display: inline-block;
-  width: 360px;  
+  width: 360px;
   margin-bottom: 36px;
   font-size: 16px;
   vertical-align: top;
   border-radius: 5px;
 }
 
+ /* в шаблоне маргины для 2 ряда
+ на 3 пикселя больше,
+ чем для первого.
+ возможно, излишняя стилизация? */
 .catalog-products-item:nth-child(3),
 .catalog-products-item:nth-child(4) {
   margin-bottom: 39px;
-}
-
-.catalog-products-item:nth-child(5),
-.catalog-products-item:nth-child(6) {
-  margin-bottom: 0;
 }
 
 .catalog-products-item:nth-child(2n+1) {
@@ -779,7 +840,7 @@ header  a {
   width: 100%;
   min-height: 230px;
   text-align: center;
-  background-color: #eeeeee;  
+  background-color: #eeeeee;
 }
 
 .product-info h2 {
@@ -808,7 +869,7 @@ header  a {
 
 .catalog-products-paginator {
   margin: 0;
-  margin-top: 60px;
+  margin-top: 25px;
   padding: 0;
   font-size: 0;
   list-style: none;
@@ -816,8 +877,8 @@ header  a {
 
 .catalog-products-paginator  li {
   display: inline-block;
-  margin-right: 12px;  
-  font-size: 16px;  
+  margin-right: 12px;
+  font-size: 16px;
 }
 
 .catalog-products-paginator  li  a{
@@ -825,7 +886,7 @@ header  a {
   padding: 10px 17px;
   font-weight: bold;
   text-transform: uppercase;
-  color: black;  
+  color: black;
   background-color: #eeeeee;
   border: 3px solid #eeeeee;
   border-radius: 3px;
@@ -890,7 +951,7 @@ footer {
 .modal-window {
   position: fixed;
   z-index: 1000;
-  display: none;
+  display: none;/*block;*/
   top: 50%;
   left: 50%;
   width: 760px;
@@ -898,6 +959,13 @@ footer {
   margin-top: -200px; /*TODO*/
   padding: 0 100px;
   background-color: white;
+/*   padding-top: 65px;
+  padding-left: 60px;
+  padding-right: 100px;
+  padding-bottom: 70px;
+  box-shadow: 0 20px 40px 0 rgba(0, 1, 1, .75);
+  background: #ffffff;
+  z-index: 1000;  */
 }
 
 .modal-window-close::before,
