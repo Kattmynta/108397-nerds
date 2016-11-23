@@ -1,4 +1,4 @@
-﻿body > *  {
+﻿/*body > *  {
   outline: 2px solid red;
 }
 
@@ -28,7 +28,7 @@ body > * > * > *  > *  > * > *  > * {
 
 body > * > * > *  > *  > * > *  > *  > * {
   outline: 2px solid brown;
-}
+}*/
 /******************************************************************/
 
 /*@font-face {
@@ -1112,6 +1112,7 @@ footer {
   box-shadow: 0 10px 50px 0 #5c5d5d;
 }
 
+/* TODO: долой извращения? */
 .modal-window-close::before,
 .modal-window-close::after {
   content: '';
@@ -1146,16 +1147,17 @@ footer {
   line-height: 18px;
 }
 
-.modal-window-form label {
+.personal-data label {
   font-weight: bold;
 }
 
-.modal-window-form input[type="text"] {
+.personal-data input[type="text"] {
   box-sizing: border-box;
   width: 360px;
-  padding-top: 13px;
   padding: 13px;
   margin-top: 10px;
+  border: 2px solid #d7dcde;
+  border-radius: 3px;
 }
 
 .username {
@@ -1168,14 +1170,25 @@ footer {
   width: 360px;
 }
 
-.letter-text p {
+.letter p {
   margin: 0;
-  margin-top: 18px;
+  margin-top: 35px;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
-.letter {
+.letter-text {
+  box-sizing: border-box;
+  width: 100%;
   margin: 0;
+  margin-bottom: 42px;
   padding: 13px;
+  border-radius: 3px;
+}
+
+.modal-submit {
+  padding: 16px 82px;
+  border: none;
 }
 
 .footer-social-container {
@@ -1194,8 +1207,8 @@ footer {
   display: inline-block;
   width: 79px;
   height: 79px;
-  border-radius: 50%;
   margin-right: 12px;
+  border-radius: 50%;
 }
 
 .footer-social-btn:hover {

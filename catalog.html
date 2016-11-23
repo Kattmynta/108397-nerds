@@ -240,17 +240,19 @@
         <p>Напишите нам</p>
         <div class="modal-window-close"></div>
         <form class="modal-window-form" action="#" method="post">
-          <div class="username">
-            <label for="username-id">Ваше имя:</label>
-            <input type="text" name="username" id="username-id" placeholder="Представьтесь, пожалуйста">
+          <div class="personal-data clearfix">
+            <div class="username">
+              <label for="username-id">Ваше имя:</label>
+              <input type="text" name="username" id="username-id" placeholder="Представьтесь, пожалуйста">
+            </div>
+            <div class="email">
+              <label for="email-id">Ваш e-mail:</label>
+              <input type="text" name="email" id="email-id" placeholder="Для отправки ответа">
+            </div>
           </div>
-          <div class="email">
-            <label for="email-id">Ваш e-mail:</label>
-            <input type="text" name="email" id="email-id" placeholder="Для отправки ответа">
-          </div>
-          <div class="letter-text">
+          <div class="letter">
             <p>Текст письма:</p>
-            <textarea class="letter" rows="6"  placeholder="В свободной форме"></textarea>
+            <textarea class="letter-text" rows="6"  placeholder="В свободной форме"></textarea>
           </div>
           <div>
             <input class="submit" type="submit" name="send" id="send-id">
