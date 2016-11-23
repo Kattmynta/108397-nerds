@@ -1114,6 +1114,15 @@ footer {
   margin-right: 12px;
 }
 
+.footer-social-btn:hover {
+  background-color: #fb565a;
+}
+
+.footer-social-btn:active {
+  background-color: #d7373b;
+  box-shadow: inset 0 3px #c13135;
+}
+
 .footer-social-btn-vk {
   background: #e1e1e1 url(../img/vk-icon.png) no-repeat 50% 50%;
 }
