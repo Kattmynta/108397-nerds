@@ -1,4 +1,4 @@
-﻿body > *  {
+﻿/*body > *  {
   outline: 2px solid red;
 }
 
@@ -28,7 +28,7 @@ body > * > * > *  > *  > * > *  > * {
 
 body > * > * > *  > *  > * > *  > *  > * {
   outline: 2px solid brown;
-}
+}*/
 /******************************************************************/
 
 /*@font-face {
@@ -805,36 +805,105 @@ header  a {
   width: 760px;
 }
 
-.catalog-sorter {
+.catalog-sorter-container {
 
 }
 
-.catalog-sorter h2 {
+.catalog-sorter-container h2 {
   float: left;
+  width: 200px;
   padding: 0;
   margin: 0;
 }
 
-.catalog-sorter form {
+.catalog-sorter {
   float: right;
+  font-size: 0;
 }
 
 .catalog-sorter-param {
   display: inline-block;
+  margin-right: 50px;
 }
+
+.catalog-sorter-param a {
+  margin-right: 27px;
+  vertical-align: bottom;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+  opacity: 0.2;
+}
+
+.catalog-sorter-param a:last-child {
+  margin-right: 0;
+}
+
+.catalog-sorter-param a:not([class~="active"]):hover {
+  opacity: 0.5;
+}
+
+.catalog-sorter-param .active {
+  opacity: 1;
+}
+
 
 .catalog-sorter-direction {
-   display: inline-block;
-}
-
-.sort-down {
   display: inline-block;
-  font-size: 0;
-  background: url(../img/sort-down.png) no-repeat 0 0;
 }
 
-.catalog-sorter input {
-  display: none;
+.sort-down,
+.sort-up  {
+  position: relative;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	vertical-align: middle;
+}
+
+.sort-down  {
+  position: relative;
+  margin-right: 20px;
+}
+
+.sort-down:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+	width: 0;
+	height: 0;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 9px solid #000000;
+  opacity: 0.2;
+}
+
+.sort-up:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+	width: 0;
+	height: 0;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-bottom: 9px solid #000000;
+  opacity: 0.2;
+}
+
+.active:before {
+  opacity: 1;
+}
+
+.sort-down:not([class~="active"]):hover:before,
+.sort-up:not([class~="active"]):hover:before {
+  opacity: 0.5;
 }
 
 .catalog-products {

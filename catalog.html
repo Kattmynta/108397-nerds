@@ -100,24 +100,19 @@
           </form>
         </aside>
         <div class="catalog">
-          <div class="catalog-sorter clearfix">
+          <div class="catalog-sorter-container clearfix">
             <h2>Сортировать:</h2>
-            <form>
+            <div class="catalog-sorter">
               <div class="catalog-sorter-param">
-                <input type="radio" name="sorting-param" id="sorting-param-price" checked>
-                <label for="sorting-param-price">По цене</label>
-                <input type="radio" name="sorting-param" id="sorting-param-type">
-                <label for="sorting-param-type">По типу</label>
-                <input type="radio" name="sorting-param" id="sorting-param-name">
-                <label for="sorting-param-name">По названию</label>
+                <a class="active">По цене</a>
+                <a href="#">По типу</a>
+                <a href="#">По названию</a>
               </div>
               <div class="catalog-sorter-direction">
-                <input type="radio" name="sorting-dir" id="sorting-dir-down" checked>
-                <label class="sort-down" for="sorting-dir-down">По убыванию</label>
-                <input type="radio" name="sorting-dir" id="sorting-dir-up">
-                <label class="sort-up" for="sorting-dir-up">По возрастанию</label>
+                <a class="sort-down active"></a>
+                <a class="sort-up" href="#"></a>
               </div>
-            </form>
+            </div>
           </div>
           <div class="catalog-products">
             <article class="catalog-products-item">
