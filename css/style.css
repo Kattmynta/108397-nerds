@@ -1,4 +1,4 @@
-﻿/*body > *  {
+﻿body > *  {
   outline: 2px solid red;
 }
 
@@ -28,7 +28,7 @@ body > * > * > *  > *  > * > *  > * {
 
 body > * > * > *  > *  > * > *  > *  > * {
   outline: 2px solid brown;
-}*/
+}
 /******************************************************************/
 
 /*@font-face {
@@ -1098,14 +1098,18 @@ footer {
 .modal-window {
   position: fixed;
   z-index: 1000;
-  display: none;/*block;*/
+  display: block;
   top: 50%;
   left: 50%;
   width: 760px;
   margin-left: -480px;
   margin-top: -200px;
-  padding: 0 100px;
+  padding-top: 67px;
+  padding-bottom: 84px;
+  padding-left: 100px;
+  padding-right: 100px;
   background-color: white;
+  box-shadow: 0 10px 50px 0 #5c5d5d;
 }
 
 .modal-window-close::before,
@@ -1114,7 +1118,6 @@ footer {
   position: absolute;
   top: 78px;
   right: 90px;
-
   width: 26px;
   height: 5px;
   background-color: #fecccd;
@@ -1131,36 +1134,48 @@ footer {
 
 .modal-window > p {
   margin: 0;
-  margin-top: 68px;
-  margin-bottom: 45px;
+  margin-bottom: 41px;
   font-size: 45px;
   line-height: 45px;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .modal-window-form {
   display: block;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.modal-window-form label {
+  font-weight: bold;
 }
 
 .modal-window-form input[type="text"] {
+  box-sizing: border-box;
   width: 360px;
+  padding-top: 13px;
+  padding: 13px;
+  margin-top: 10px;
 }
 
-.modal-window-form .username {
+.username {
   float: left;
   width: 360px;
 }
 
-.modal-window-form .password {
+.email {
   float: right;
   width: 360px;
 }
 
-.modal-window-form .letter-text {
-  float: left;
-  width: 760px;
-  margin-top: 35px;
+.letter-text p {
+  margin: 0;
+  margin-top: 18px;
+}
 
+.letter {
+  margin: 0;
+  padding: 13px;
 }
 
 .footer-social-container {
