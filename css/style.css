@@ -156,11 +156,6 @@ header  a {
 }
 
 .cart:before {
-  /*content: url(../img/sprite.png) no-repeat 0 0;
-  position: absolute;
-  top: 2px;
-  display: block;*/
-
   content: '';
   position: absolute;
   top: 3px;
@@ -568,13 +563,6 @@ header  a {
 
 /* catalog main */
 
-/* .catalog-main-header {
-  margin: 0;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  background-color: #eeeeee;
-} */
-
 .catalog-main h1 {
   margin: 0;
   padding-top: 73px;
@@ -710,16 +698,21 @@ header  a {
 }
 
 .catalog-filter-grid label:before {
-  content: url(../img/radio-off.png);
+  content: '';
   position: absolute;
   left: 1px;
-  top: -2px;
+  top: -3px;
   display: block;
+  width: 25px;
+  height: 25px;
+  background-position: 0 -90px;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
   opacity: 0.4;
 }
 
 .catalog-filter-grid input:checked + label:before {
-  content: url(../img/radio-on.png);
+  background-position: 0 -119px;
 }
 
 .catalog-filter-grid label:hover:before {
@@ -740,16 +733,21 @@ header  a {
 }
 
 .catalog-filter-features label:before {
-  content: url(../img/checkbox-off.png);
+  content: '';
   position: absolute;
   left: 1px;
   top: -2px;
   display: block;
+  width: 27px;
+  height: 24px;
+  background-position: 0 -30px;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
   opacity: 0.4;
 }
 
 .catalog-filter-features input:checked + label:before {
-  content: url(../img/checkbox-on.png);
+  background-position: 0 -60px;
 }
 
 .catalog-filter-features label:hover:before {
@@ -1212,7 +1210,6 @@ footer {
 .footer-social-btn {
   position: relative;
   display: inline-block;
-  z-index: 1;
   width: 79px;
   height: 79px;
   margin-right: 12px;
@@ -1220,23 +1217,44 @@ footer {
   background-color: #e1e1e1;
 }
 
-.footer-social-btn:before {
-  content: '';
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 79px;
-  height: 79px;
+.footer-social-btn-insta {
+  margin-right: 0;
 }
 
-.footer-social-btn:hover:before {
+.footer-social-btn:hover {
   background-color: #fb565a;
 }
 
-.footer-social-btn:active:before {
-  opacity: 0.3;
+.footer-social-btn:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.footer-social-btn-vk:before {
+  top: 32px;
+  left: 27px;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  background-position: 0 -270px;
+}
+
+.footer-social-btn-fb:before {
+  top: 28px;
+  left: 34px;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  background-position: 0 -210px;
+}
+
+.footer-social-btn-insta:before {
+  top: 30px;
+  left: 29px;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  background-position: 0 -240px;
 }
 
 .footer-social-btn:active{
@@ -1244,29 +1262,8 @@ footer {
   box-shadow: inset 0 3px #c13135;
 }
 
-.footer-social-btn-vk:before {
-  background-image: url(../img/vk-icon.png);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  border-radius: 50%;
-}
-
-.footer-social-btn-fb:before {
-  background-image: url(../img/fb-icon.png);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  border-radius: 50%;
-}
-
-.footer-social-btn-insta {
-  margin-right: 0;
-}
-
-.footer-social-btn-insta:before {
-  background-image: url(../img/insta-icon.png);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  border-radius: 50%;
+.footer-social-btn:active:before {
+  opacity: 0.3;
 }
 
 .footer-discount {
