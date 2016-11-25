@@ -1,12 +1,13 @@
-var link = document.querySelector(".map .btn");
+п»їvar link = document.querySelector(".map .btn");
 var popup = document.querySelector(".modal-window");
 var close = document.querySelector(".modal-window-close");
 var form = popup.querySelector("form");
 
-// TODO: а почему тут не срабатывает form.querySelector?
 var user_name = popup.querySelector(".username input");
 var user_email = popup.querySelector(".email input");
 var letter_text = popup.querySelector("textarea");
+
+var empty_field=0;
 
 link.addEventListener("click", function(event) {
   event.preventDefault();
@@ -17,17 +18,28 @@ link.addEventListener("click", function(event) {
 close.addEventListener("click", function(event) {
   event.preventDefault();
   popup.classList.remove("modal-window-show");
+  user_name.classList.remove("modal-input-error");
 });
 
 form.addEventListener("submit", function(event) {
   event.preventDefault();
-  if (!user_name.value || !user_email.value || !letter_text.value) {
-    event.preventDefault();
-    console.log("Oops!"); // TODO: вывести сообщение для пользователя
-  }
+
+  if (!user_name.value) empty_field = user_name;
+  else if (!user_email.value) empty_field = user_email;
+  else if (!letter_text.value) empty_field = letter_text;
   else
+  {
     form.submit();
+    return;
+  }
+
+  empty_field.classList.add("modal-input-error");
+  empty_field.addEventListener("input", function(event) {
+    empty_field.classList.remove("modal-input-error");
+  });
+
 });
+
 
 function initialize() {
   var mapOptions = {

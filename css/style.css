@@ -1,4 +1,38 @@
-﻿html {
+﻿/*body > *  {
+  outline: 2px solid red;
+}
+
+body > * > *  {
+  outline: 2px solid orange;
+}
+
+body > * > * > * {
+  outline: 2px solid yellow;
+}
+
+body > * > * > *  > * {
+  outline: 2px solid lime;
+}
+
+body > * > * > *  > *  > *{
+  outline: 2px solid aqua;
+}
+
+body > * > * > *  > *  > *  > *{
+  outline: 2px solid blue;
+}
+
+body > * > * > *  > *  > * > *  > * {
+  outline: 2px solid purple;
+}
+
+body > * > * > *  > *  > * > *  > *  > * {
+  outline: 2px solid brown;
+}*/
+
+/*****************************************************************/
+
+html {
   background-color: #ffffff;
 }
 
@@ -1098,6 +1132,21 @@ header  a {
   text-align: center;
 }
 
+@keyframes bounce {
+  0%   {
+    transform: translateY(2000px);
+  }
+  70%  {
+    transform: translateY(20px);
+  }
+  90%  {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .modal-window {
   position: fixed;
   z-index: 1000;
@@ -1117,6 +1166,7 @@ header  a {
 
 .modal-window-show {
   display: block;
+  animation: bounce 0.6s;
 }
 
 .modal-window-close {
@@ -1166,7 +1216,7 @@ header  a {
   font-weight: bold;
 }
 
-.personal-data input[type="text"] {
+.personal-data input {
   box-sizing: border-box;
   width: 360px;
   padding: 13px;
@@ -1175,11 +1225,11 @@ header  a {
   border-radius: 3px;
 }
 
-.personal-data input[type="text"]:hover {
+.personal-data input:hover {
   border-color: #b4b9bb;
 }
 
-.personal-data input[type="text"]:focus {
+.personal-data input:focus {
   border-color: #000000;
   outline-color: #000000;
 }
@@ -1225,10 +1275,17 @@ header  a {
   border: none;
 }
 
+.modal-window-form .modal-input-error,
+.modal-window-form .modal-input-error:focus  {
+  border-color: #e74246;
+}
+
+.modal-window-form .modal-input-error:hover {
+  outline-color: #e74246;
+}
+
 footer {
-  /*min-height: 563px;*/
   padding: 0;
-  /*padding-top: 60px;*/
   padding-bottom: 70px;
 }
 
@@ -1240,7 +1297,7 @@ footer {
 .footer-social {
   float: left;
   margin-right: 140px;
-  margin-top: 9px;/*69px;*/
+  margin-top: 9px;
   font-size: 0;
 }
 
@@ -1306,7 +1363,7 @@ footer {
 
 .footer-discount {
   float: left;
-  margin-top: 15px /*75px;*/
+  margin-top: 15px;
 }
 
 .footer-discount p {
