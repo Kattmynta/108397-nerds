@@ -21,15 +21,12 @@ close.addEventListener("click", function(event) {
 
 form.addEventListener("submit", function(event) {
   event.preventDefault();
-  console.log(form);
-  console.log(user_name);
-  console.log(user_email);
-  console.log(letter_text);
-
-  if (!user_email.value || !letter_text.value) {
+  if (!user_name.value || !user_email.value || !letter_text.value) {
     event.preventDefault();
-    console.log("Oops!"); // TODO:
+    console.log("Oops!"); // TODO: вывести сообщение для пользователя
   }
+  else
+    form.submit();
 });
 
 function initialize() {
