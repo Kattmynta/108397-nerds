@@ -3,7 +3,7 @@
 }
 
 body {
-  min-width: 1440px;
+  min-width: 1200px;
   margin: 0;
 
   font-family: 'Roboto', 'Arial', sans-serif;
@@ -113,6 +113,8 @@ header  a {
   display: inline-block;
   margin-right: 48px;
   font-size: 16px;
+  font-weight: 500;
+  vertical-align: bottom; /* TODO: */
 }
 
 .nav-item:last-child {
@@ -153,6 +155,7 @@ header  a {
   display: block;
   min-width: 100%;
   text-align: right;
+  font-weight: 500;
 }
 
 .cart:before {
@@ -476,6 +479,7 @@ header  a {
   display: inline-block;
   width: 120px;
   margin: 0;
+  vertical-align: top; /* TODO: */
   text-align: left;
 }
 
@@ -488,7 +492,7 @@ header  a {
 }
 
 .percent {
-  font-size: 32px;
+  font-size: 34px;
 }
 
 .studio-right .numbers-item-text {
@@ -510,22 +514,22 @@ header  a {
   padding-right: 40px;
 }
 
-.partners-item .logo {
+.partners-item-logo {
   display: block;
 }
 
-.partners-item .logo img {
+.partners-item-logo img {
   display: block;
   vertical-align: bottom;
   margin: 0 auto;
   opacity: 0.2;
 }
 
-.partners-item .logo:hover img {
+.partners-item-logo:hover img{
   opacity: 1;
 }
 
-.partners-item .logo:active img {
+.partners-item-logo:active img {
   opacity: 0.1;
 }
 
@@ -565,8 +569,8 @@ header  a {
 
 .catalog-main h1 {
   margin: 0;
-  padding-top: 73px;
-  padding-bottom: 110px;
+  padding-top: 72px;
+  padding-bottom: 108px;
   text-align: center;
   background-color: #eeeeee;
 }
@@ -574,7 +578,7 @@ header  a {
 .catalog-wrapper {
   width: 1160px;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 53px;
 }
 
 .catalog-filter {
@@ -604,7 +608,7 @@ header  a {
 }
 
 .catalog-filter-price {
-  margin-bottom: 52px;
+  margin-bottom: 55px;
 }
 
 .catalog-filter-price  h2{
@@ -618,6 +622,7 @@ header  a {
   padding-top: 9px;
   padding-bottom: 9px;
   text-align: center;
+  vertical-align: middle;
   font-size: 16px;
   background-color: #eeeeee;
   border: none;
@@ -685,11 +690,16 @@ header  a {
 }
 
 .catalog-filter-grid  {
-  margin-bottom: 42px;
+  margin-bottom: 45px;
+}
+
+.catalog-filter-grid  h2 {
+  margin-bottom: 13px;
 }
 
 .catalog-filter-grid  li {
-  margin: 16px 0;
+  margin: 0;
+  margin-bottom: 16px;
 }
 
 .catalog-filter-grid label {
@@ -711,7 +721,7 @@ header  a {
   opacity: 0.4;
 }
 
-.catalog-filter-grid input:checked + label:before {
+.grid-radio:checked + label:before {
   background-position: 0 -119px;
 }
 
@@ -720,11 +730,16 @@ header  a {
 }
 
 .catalog-filter-features {
-  margin-bottom: 42px;
+  margin-bottom: 47px;
+}
+.catalog-filter-features h2 {
+  margin: 0;
+  margin-bottom: 13px;
 }
 
 .catalog-filter-features  li {
-  margin: 16px 0;
+  margin: 0;
+  margin-bottom: 16px;
 }
 
 .catalog-filter-features label {
@@ -746,7 +761,7 @@ header  a {
   opacity: 0.4;
 }
 
-.catalog-filter-features input:checked + label:before {
+.features-cb:checked + label:before {
   background-position: 0 -60px;
 }
 
@@ -756,7 +771,7 @@ header  a {
 
 .filter-btn {
   display: block;
-  padding: 17px 88px;
+  padding: 16px 87px;
   text-align: center;
   text-transform: uppercase;
   font-size: 16px;
@@ -764,6 +779,7 @@ header  a {
   color: black;
   background-color: #eeeeee;
   border: none;
+  border-radius: 3px;
 }
 
 .filter-btn:hover {
@@ -781,15 +797,12 @@ header  a {
   width: 760px;
 }
 
-.catalog-sorter-container {
-
-}
-
 .catalog-sorter-container h2 {
   float: left;
   width: 200px;
   padding: 0;
   margin: 0;
+  vertical-align: bottom;
 }
 
 .catalog-sorter {
@@ -799,7 +812,8 @@ header  a {
 
 .catalog-sorter-param {
   display: inline-block;
-  margin-right: 50px;
+  margin-right: 46px;
+  vertical-align: bottom;
 }
 
 .catalog-sorter-param a {
@@ -829,6 +843,7 @@ header  a {
 
 .catalog-sorter-direction {
   display: inline-block;
+  vertical-align: bottom;
 }
 
 .sort-down,
@@ -837,12 +852,13 @@ header  a {
 	display: inline-block;
 	width: 10px;
 	height: 10px;
+  margin-top: 10px;
 	vertical-align: middle;
 }
 
 .sort-down  {
   position: relative;
-  margin-right: 20px;
+  margin-right: 19px;
 }
 
 .sort-down:before {
@@ -921,6 +937,7 @@ header  a {
   height: 14px;
   margin-top: 13px;
   margin-right: 5px;
+  vertical-align: bottom;
   background-color: white;
   border-radius: 50%;
   cursor: pointer;
@@ -944,7 +961,6 @@ header  a {
   bottom: 0;
   left: 0;
   width: 100%;
-  min-height: 230px;
   text-align: center;
   background-color: #eeeeee;
 }
@@ -957,26 +973,35 @@ header  a {
   background-color: #4d4d4d;
 }
 
-.product-info h2 {
+.product-info-text {
+  min-height: 90px;
+  max-height: 455px;
+  margin-bottom: 29px;
+  overflow-y: auto;
+}
+
+.product-info-text h2 {
   margin: 0;
   margin-top: 26px;
   margin-bottom: 14px;
 }
 
-.product-info h2 a {
+.product-info-text a {
   color: black;
 }
 
 .product-info p {
-  margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 0;
   line-height: 1.2;
 }
 
 .product-info .btn {
   display: block;
   width: 200px;
-  margin: 0 auto;
+  margin-top: 29px;
+  margin-bottom: 43px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 13px 0;
   text-align: center;
 }
@@ -992,6 +1017,7 @@ header  a {
 .catalog-products-paginator  li {
   display: inline-block;
   margin-right: 12px;
+  vertical-align: bottom;
 }
 
 .catalog-products-paginator a {
@@ -1027,6 +1053,7 @@ header  a {
 
 .map {
   position: relative;
+  width: 100%;
   margin-top: 60px;
   margin-bottom: 60px;
 }
@@ -1034,7 +1061,7 @@ header  a {
 .map-background {
   position: relative;
   height: 416px;
-  background: url("../img/map.jpg") 50% 50% no-repeat;
+  background: #e9e5dc url("../img/map.jpg") 50% 50% no-repeat;
   margin-bottom: 60px;
   background-size: cover;
 }
@@ -1042,7 +1069,8 @@ header  a {
 .map-contacts {
   position: absolute;
   top: 55px;
-  left: 140px;
+  left: 50%;
+  margin-left: -580px;
   padding: 48px 50px;
   font-size: 16px;
   line-height: 18px;
@@ -1087,12 +1115,16 @@ header  a {
   box-shadow: 0 10px 50px 0 #5c5d5d;
 }
 
+.modal-window-show {
+  display: block;
+}
+
 .modal-window-close {
   cursor: pointer;
 }
 
-.modal-window-close::before,
-.modal-window-close::after {
+.modal-window-close:before,
+.modal-window-close:after {
   content: '';
   position: absolute;
   top: 86px;
@@ -1101,6 +1133,11 @@ header  a {
   height: 5px;
   background-color: #fecccd;
   border-radius: 1px;
+}
+
+.modal-window-close:hover:before,
+.modal-window-close:hover:after {
+  background-color: #fb565a;
 }
 
 .modal-window-close::before {
@@ -1213,6 +1250,7 @@ footer {
   width: 79px;
   height: 79px;
   margin-right: 12px;
+  vertical-align: bottom;
   border-radius: 50%;
   background-color: #e1e1e1;
 }

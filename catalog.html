@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
@@ -36,7 +36,7 @@
       <h1>Магазин готовых шаблонов</h1>
       <div class="catalog-wrapper clearfix">
         <aside class="catalog-filter">
-          <form action="#" method="get">
+          <form action="filter.html" method="get">
             <div class="catalog-filter-price clearfix">
               <h2>Стоимость:</h2>
               <div class="price-slider">
@@ -58,15 +58,15 @@
               <h2>Сетка:</h2>
               <ul>
                 <li>
-                  <input type="radio" name="grid" id="grid-adaptive" checked>
+                  <input class="grid-radio" type="radio" name="grid" id="grid-adaptive" checked>
                   <label for="grid-adaptive">Адаптивная</label>
                 </li>
                 <li>
-                  <input type="radio" name="grid" id="grid-fixed">
+                  <input class="grid-radio" type="radio" name="grid" id="grid-fixed">
                   <label for="grid-fixed">Фиксированная</label>
                 </li>
                 <li>
-                  <input type="radio" name="grid" id="grid-rubber">
+                  <input class="grid-radio" type="radio" name="grid" id="grid-rubber">
                   <label for="grid-rubber">Резиновая</label>
                 </li>
               </ul>
@@ -75,23 +75,23 @@
               <h2>Особенности:</h2>
               <ul>
                 <li>
-                  <input type="checkbox" name="features-slider" id="features-slider" checked>
+                  <input class="features-cb" type="checkbox" name="features-slider" id="features-slider" checked>
                   <label for="features-slider">Слайдер</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="features-preferences" id="features-preferences">
+                  <input class="features-cb" type="checkbox" name="features-preferences" id="features-preferences">
                   <label for="features-preferences">Блок преимуществ</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="features-news" id="features-news" checked>
+                  <input class="features-cb" type="checkbox" name="features-news" id="features-news" checked>
                   <label for="features-news">Новости</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="features-gallery" id="features-gallery">
+                  <input class="features-cb" type="checkbox" name="features-gallery" id="features-gallery">
                   <label for="features-gallery">Галерея</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="features-cart" id="features-cart">
+                  <input class="features-cb" type="checkbox" name="features-cart" id="features-cart">
                   <label for="features-cart">Корзина</label>
                 </li>
                 </ul>
@@ -124,9 +124,11 @@
               <div class="catalog-products-item-content">
                 <img src="./img/img-sedona.jpg" alt="" width="360" height="576">
                 <div class="product-info">
-                  <h2><a href="#">Sedona</a></h2>
-                  <p>Информационный сайт<br>для туристов</p>
-                  <a class="btn" href="">9 900 руб.</a>
+                  <div class="product-info-text"> 
+                    <h2><a href="#">Sedona</a></h2>
+                    <p>Информационный сайт<br>для туристов</p>
+                  </div>
+                  <a class="btn" href="#">9 900 руб.</a>            
                 </div>
               </div>
             </article>
@@ -139,9 +141,11 @@
               <div class="catalog-products-item-content">
                 <img src="./img/img-pink.jpg" alt="" width="360" height="576">
                 <div class="product-info">
-                  <h2><a href="#">Pink App</a></h2>
-                  <p>Продуктовый лендинг приложения для iOS и Android</p>
-                  <a class="btn" href="">9 900 руб.</a>
+                  <div class="product-info-text"> 
+                    <h2><a href="#">Pink App</a></h2>
+                    <p>Продуктовый лендинг приложения для iOS и Android</p>
+                  </div>
+                  <a class="btn" href="#">9 900 руб.</a>
                 </div>
               </div>
             </article>
@@ -152,11 +156,13 @@
                 <div></div>
               </div>
               <div class="catalog-products-item-content">
-                <img src="./img/img-barbershop.jpg" alt="" width="360" height="576">
-                <div class="product-info">
-                  <h2><a href="#">Barbershop</a></h2>
-                  <p>Сайт салона красоты. Для мужчин, да.</p>
-                  <a class="btn" href="">9 900 руб.</a>
+                <img src="./img/img-barbershop.jpg" alt="" width="360" height="576">                
+                <div class="product-info"> 
+                  <div class="product-info-text"> 
+                    <h2><a href="#">Barbershop</a></h2>
+                    <p>Сайт салона красоты. Для мужчин, да.</p>
+                  </div>
+                  <a class="btn" href="#">9 900 руб.</a>
                 </div>
               </div>
             </article>
@@ -169,9 +175,11 @@
               <div class="catalog-products-item-content">
                 <img src="./img/img-mishka.jpg" alt="" width="360" height="576">
                 <div class="product-info">
-                  <h2><a href="#">Mishka</a></h2>
-                  <p>Интернет-магазин вязаных игрушек</p>
-                  <a class="btn" href="">9 900 руб.</a>
+                  <div class="product-info-text">                 
+                    <h2><a href="#">Mishka</a></h2>
+                    <p>Интернет-магазин вязаных игрушек</p>
+                  </div>
+                  <a class="btn" href="#">9 900 руб.</a>
                 </div>
               </div>
             </article>
@@ -184,9 +192,11 @@
               <div class="catalog-products-item-content">
                 <img src="./img/img-aplus.jpg" alt="" width="360" height="576">
                 <div class="product-info">
-                  <h2><a href="#">A Plus</a></h2>
-                  <p>Лендинг курсов повышения квалификации</p>
-                  <a class="btn" href="">9 900 руб.</a>
+                  <div class="product-info-text">                 
+                    <h2><a href="#">A Plus</a></h2>
+                    <p>Лендинг курсов повышения квалификации</p>
+                  </div>
+                  <a class="btn" href="#">9 900 руб.</a>
                 </div>
               </div>
             </article>
@@ -199,9 +209,11 @@
               <div class="catalog-products-item-content">
                 <img src="./img/img-kvast.jpg" alt="" width="360" height="576">
                 <div class="product-info">
-                  <h2><a href="#">Кваст</a></h2>
-                  <p>Промо-сайт производителя крафтового кваса</p>
-                  <a class="btn" href="">9 900 руб.</a>
+                  <div class="product-info-text"> 
+                    <h2><a href="#">Кваст</a></h2>
+                    <p>Промо-сайт производителя крафтового кваса</p>
+                  </div>
+                  <a class="btn" href="#">9 900 руб.</a>
                 </div>
               </div>
             </article>
